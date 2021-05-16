@@ -1,7 +1,6 @@
 import util
 import csv
 
-
 from django.db.models import Q
 #  需要在django启动之后，导入Region模型 不然会报错
 from region.models import Region
@@ -26,11 +25,13 @@ def generate_province_capital():
     print(Region.objects.filter(id__endswith='0100').exclude(parent__is_municipality=True).update(
         is_province_capital=True))
 
+
 # 设置显示在地图上的城市
 def set_display_region():
     # Q对象 用于处理 查询条件之间的 AND OR NOT
     Region.objects.filter(Q(is_municipality=True) | Q(is_province_capital=True)).update(is_display=True)
     # print(Region.objects.filter(Q(is_municipality=True) | Q(is_province_capital=True)).query)
+
 
 #  从csv文件中导入 城市的经度和纬度信息
 def insert_latitude_from_csv():
@@ -51,6 +52,7 @@ def insert_latitude_from_csv():
                 r.latitude = float(row[3])
                 r.save()
                 print('%s修改成功！' % r.name)
+
 
 if __name__ == '__main__':
     # generate_region_level()

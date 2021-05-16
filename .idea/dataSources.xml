@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="db" uuid="2f278837-e7a6-4539-b6bc-30b8571d6da1">
-      <driver-ref>f1e92129-b85b-41e5-a640-1c5afaf515cd</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:D:\django_test\weather_analysis1\db.sqlite3</jdbc-url>
-      <libraries>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.25.1/license.txt</url>
-        </library>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/Xerial SQLiteJDBC/3.25.1/sqlite-jdbc-3.25.1.jar</url>
-        </library>
-      </libraries>
-    </data-source>
     <data-source source="LOCAL" name="weather_analysis1" uuid="1e06c9e2-79bf-4239-9197-e6e2e65842ed">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
@@ -22,6 +8,12 @@
       <remarks>$PROJECT_DIR$/weather_analysis1/settings.py</remarks>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:C:\Users\Administrator\Desktop\weather_analysis1\db.sqlite3</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="identifier.sqlite" uuid="3b1232ad-8ab5-4a55-aa81-8d567256b324">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:identifier.sqlite</jdbc-url>
     </data-source>
   </component>
 </project>

@@ -58,12 +58,13 @@ def save_display_region_result():
 
 
 if __name__ == '__main__':
-    # region = Region.objects.get(name='贵阳市')
-    # # print(get_region_weather_data(region))
-    # # print(get_region_weather_date(region))
-    # # df = pd.DataFrame(get_region_weather_data(region))
-    # df = get_region_weather_dataframe(region)
-    # print(df)
+
+    region = Region.objects.get(name='贵阳市')
+    print(get_region_weather_data(region))
+    print(get_region_weather_date(region))
+    df = pd.DataFrame(get_region_weather_data(region))
+    df = get_region_weather_dataframe(region)
+    print(df)
     # new = normalize_weather_data(region)
     # print(new)
     # print(caculate_region_result(region))
